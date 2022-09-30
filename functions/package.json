@@ -6,7 +6,7 @@
     "dependencies": {
         "aws-lambda": "^1.0.7",
         "aws-sdk": "^2.799.0",
-        "node-fetch": "^3.2.6",
+        "node-fetch": "^3.2.10",
         "validator": "^13.7.0"
     },
     "devDependencies": {
