@@ -1,4 +1,4 @@
-import { ScrollSpy } from 'bootstrap';
+import { ScrollSpy } from "bootstrap";
 
 declare global {
   interface Window {
@@ -40,7 +40,7 @@ export function scroller() {
     const navbarToggler: HTMLElement | null =
       document.body.querySelector(".navbar-toggler");
     const responsiveNavItems = [].slice.call(
-      document.querySelectorAll("#navbarResponsive .nav-link")
+      document.querySelectorAll("#navbarResponsive .nav-link"),
     );
     responsiveNavItems.map(function (responsiveNavItem: HTMLElement) {
       responsiveNavItem.addEventListener("click", () => {

@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: functions
 Transform:
-- AWS::Serverless-2016-10-31
+  - AWS::Serverless-2016-10-31
 Globals:
   Function:
     Tracing: Active
@@ -14,10 +14,11 @@ Resources:
       Handler: dist/cjs/index.putItemHandler
       Runtime: nodejs16.x
       Architectures:
-      - arm64
+        - arm64
       MemorySize: 128
       Timeout: 100
-      Description: A simple example includes a HTTP post method to add one item to
+      Description:
+        A simple example includes a HTTP post method to add one item to
         a DynamoDB table.
       Events:
         Api:

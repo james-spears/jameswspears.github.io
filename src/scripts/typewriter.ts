@@ -25,10 +25,10 @@ export function skills() {
   if (cursor) {
     setInterval(() => {
       if (showCursor) {
-        cursor.style.opacity = '0';
+        cursor.style.opacity = "0";
         showCursor = false;
       } else {
-        cursor.style.opacity = '1';
+        cursor.style.opacity = "1";
         showCursor = true;
       }
     }, blink);

@@ -1,18 +1,19 @@
-import isEmail from 'validator/lib/isEmail';
+import isEmail from "validator/lib/isEmail";
 
 declare global {
-  interface Window { onClick: any; reCaptcha: any; }
+  interface Window {
+    onClick: any;
+    reCaptcha: any;
+  }
 }
 
 export async function onClick(e: MouseEvent, grecaptcha: any) {
-
   console.log("click submit");
   e.preventDefault();
 
   const name = (<HTMLInputElement>document.getElementById("name")).value;
   const email = (<HTMLInputElement>document.getElementById("email")).value;
   const message = (<HTMLInputElement>document.getElementById("message")).value;
-
 
   let errors = false;
   const nameErrors = document.getElementById("name-errors");
@@ -50,8 +51,11 @@ export async function onClick(e: MouseEvent, grecaptcha: any) {
   }
 
   const reCaptcha = (token: string) => {
-    fetch(import.meta.env.VITE_LAMBDA_CONTACT, { method: 'POST', body: JSON.stringify({ name, email, message, token })});
-  }
+    fetch(import.meta.env.VITE_LAMBDA_CONTACT, {
+      method: "POST",
+      body: JSON.stringify({ name, email, message, token }),
+    });
+  };
   window.reCaptcha = reCaptcha;
 
   grecaptcha.execute();

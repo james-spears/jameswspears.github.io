@@ -10,11 +10,9 @@ const config = {
   },
   testEnvironment: "jsdom",
   moduleNameMapper: {
-    "\\.(css)$": "identity-obj-proxy"
+    "\\.(css)$": "identity-obj-proxy",
   },
-  collectCoverageFrom: [
-    "src/**/*.{ts,tsx}",
-  ]
+  collectCoverageFrom: ["src/**/*.{ts,tsx}"],
 };
 
 export default config;
